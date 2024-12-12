@@ -22,29 +22,29 @@
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
         <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
             <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
+
             <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
                 <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
                     <header class="flex justify-between items-center py-10 px-6">
                         <div class="flex-1"></div> <!-- Placeholder untuk menjaga tata letak -->
-                        <nav class="flex gap-4">
 
-                            <a
-                            href="{{ route('howtouse') }}"
-                            class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
-                        >
-                            How to Use
-                        </a>
-                            <a
-        href="{{ route('about') }}"
-        class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
-    >
-        About
-    </a>
+                        <a
+    href="{{ route('welcome') }}"
+    class="absolute top-4 left-4 rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
+    Dashboard
+</a>
 
+<a
+href="{{ route('howtouse') }}"
+class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+style="margin-right: 16px;">
+How to Use
+</a>
 
                         @if (Route::has('login'))
                             <nav class="flex gap-4">
                                 @auth
+
                                     <a
                                         href="{{ url('/dashboard') }}"
                                         class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
@@ -69,11 +69,8 @@
                                     @endif
                                 @endauth
                             </nav>
-                            </nav>
                         @endif
                     </header>
-
-
 
                     <main class="mt-6">
                         <div class="grid gap-12 lg:grid-cols-1 lg:gap-16">
@@ -82,33 +79,66 @@
                                 id="docs-card"
                                 class="flex flex-col items-start gap-8 overflow-hidden rounded-lg bg-white p-8 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-16 lg:pb-16 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
                             >
-                                <!-- Menambahkan Gambar Offline -->
-                                <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
-                                    <img
-                                        src="assets/images/3.jpg" <!-- Ganti dengan path gambar lokal Anda -->
-                                    />
-                                </div>
+                                <!-- Menambahkan 4 Gambar dengan Deskripsi -->
+                                <div class="grid grid-cols-2 gap-6">
+                                    <!-- Gambar 1 -->
+                                    <div class="relative flex flex-col items-center">
+                                        <img src="assets/images/3.jpg" alt="Image 1" class="w-32 h-32 object-cover rounded-lg shadow-md">
+                                        <p class="mt-2 text-sm text-center text-gray-700 dark:text-white">
+                                            Deskripsi gambar 1
+                                        </p>
+                                    </div>
 
-                                <!-- Menambahkan Teks Konten -->
-                                <div class="relative flex items-center gap-8 lg:items-end">
-                                    <div id="docs-card-content" class="flex items-start gap-8 lg:flex-col" style="padding: 20px;">
-                                        <!-- Judul Teks -->
-                                        <h2 class="text-2xl font-semibold text-black dark:text-white">
-                                            Asri Pigura
-                                        </h2>
+                                    <!-- Gambar 2 -->
+                                    <div class="relative flex flex-col items-center">
+                                        <img src="assets/images/2.jpg" alt="Image 2" class="w-32 h-32 object-cover rounded-lg shadow-md">
+                                        <p class="mt-2 text-sm text-center text-gray-700 dark:text-white">
+                                            Deskripsi gambar 2
+                                        </p>
+                                    </div>
 
-                                        <!-- Paragraf Teks -->
-                                        <p class="mt-4 text-base/relaxed text-gray-700 dark:text-white"  style="text-align: justify;">
-                                            Toko Mebel “Asri Pigura” yang berlokasi di Jalan Kolombo dekat UNY akan memproduksi tiga macam produk bingkai terbaru, yaitu Bingkai Foto, Bingkai Cermin, dan Bingkai Jam Dinding. Dimana setiap produk tersebut dalam pembuatannya membutuhkan 5 jenis bahan yaitu : balok kayu, lem, cat, cermin, dan kaca.
+                                    <!-- Gambar 3 -->
+                                    <div class="relative flex flex-col items-center">
+                                        <img src="assets/images/1.jpg" alt="Image 3" class="w-32 h-32 object-cover rounded-lg shadow-md">
+                                        <p class="mt-2 text-sm text-center text-gray-700 dark:text-white">
+                                            Deskripsi gambar 3
+                                        </p>
+                                    </div>
+
+                                    <!-- Gambar 4 -->
+                                    <div class="relative flex flex-col items-center">
+                                        <img src="assets/images/4.jpg" alt="Image 4" class="w-32 h-32 object-cover rounded-lg shadow-md">
+                                        <p class="mt-2 text-sm text-center text-gray-700 dark:text-white">
+                                            Deskripsi gambar 4
                                         </p>
                                     </div>
                                 </div>
 
+                                <!-- Menambahkan Teks Konten -->
+                                <div class="relative flex items-center gap-8 lg:items-end mt-8">
+                                    <div id="docs-card-content" class="flex items-start gap-8 lg:flex-col" style="padding: 20px;">
+                                        <h2 class="text-2xl font-semibold text-black dark:text-white">About</h2>
+                                        <p class="mt-4 text-base/relaxed text-gray-700 dark:text-white" style="text-align: justify;">
+                                            UMKM (Usaha Mikro, Kecil, dan Menengah) berperan vital dalam perekonomian Indonesia, khususnya dalam mendorong pertumbuhan ekonomi lokal dan membuka lapangan pekerjaan. Salah satu contoh UMKM yang menonjol di sektor industri kreatif adalah toko pengrajin bingkai dan hiasan dinding yang dimiliki oleh Pak Gino, berlokasi di Jalan Kolombo dekat Universitas Negeri Yogyakarta (UNY). Pak Gino memulai usaha ini dengan tujuan sederhana: mencukupi kebutuhan hidup keluarganya. Dalam kondisi ekonomi yang menantang, usaha kerajinan ini menjadi sumber penghidupan yang penting, sekaligus contoh bagaimana kreativitas dapat dimanfaatkan untuk bertahan dan berkembang.<br><br>
+
+                                            Pak Gino, seorang pengrajin yang terampil, memiliki dedikasi tinggi terhadap kualitas dan keindahan produk yang dihasilkan. Bingkai dan hiasan dinding buatannya mencerminkan keterampilan tangan yang diwarisi secara turun-temurun serta inovasi yang terus diperbarui. Meskipun usaha ini bermula dari upaya sederhana untuk memenuhi kebutuhan dasar, seiring berjalannya waktu, toko Pak Gino berhasil menarik perhatian pelanggan setempat maupun mahasiswa dari UNY yang sering mengunjungi toko tersebut untuk mencari bingkai dengan desain artistik.<br><br>
+
+                                            Namun, seperti banyak UMKM lainnya, toko Pak Gino menghadapi sejumlah tantangan besar. Salah satunya adalah keterbatasan dalam memasarkan produk secara lebih luas. Metode pemasaran yang digunakan masih konvensional, mengandalkan kunjungan langsung pelanggan dan rekomendasi dari mulut ke mulut. Hal ini membuat usaha Pak Gino sulit bersaing dengan toko-toko modern yang lebih mudah diakses melalui platform online. Tantangan lainnya adalah pengelolaan stok bahan baku dan biaya operasional yang harus diatur dengan cermat agar usaha tetap berjalan stabil.<br><br>
+
+                                            Selain tantangan eksternal, usaha Pak Gino juga harus terus beradaptasi dengan tren dan preferensi konsumen yang terus berubah. Desain bingkai dan hiasan dinding yang dahulu diminati mungkin tidak lagi sesuai dengan selera generasi muda saat ini. Oleh karena itu, diperlukan inovasi berkelanjutan dalam desain dan pengembangan produk, yang tidak hanya memperhatikan aspek estetika tetapi juga fungsionalitas dan keunikan.<br><br>
+
+                                            Di tengah persaingan yang semakin ketat dan perubahan gaya hidup konsumen yang cenderung mengutamakan kepraktisan, keberlanjutan usaha Pak Gino bergantung pada kemampuannya berinovasi serta memperluas jangkauan pasar. Salah satu langkah penting yang dapat dilakukan adalah mengadopsi strategi pemasaran digital, seperti memanfaatkan media sosial dan e-commerce untuk memperkenalkan produk ke khalayak yang lebih luas. Dengan promosi yang tepat, toko Pak Gino dapat menjangkau pelanggan di luar daerah Yogyakarta, bahkan berpotensi untuk merambah pasar nasional.<br><br>
+
+                                            Tujuan awal Pak Gino dalam mendirikan usaha bingkai dan hiasan dinding mungkin sederhana, yakni mencukupi kebutuhan hidup keluarganya. Namun, seiring dengan berkembangnya usaha ini, terdapat potensi besar untuk menjadikannya sebagai salah satu contoh sukses UMKM yang mampu beradaptasi dan bertahan di tengah perubahan zaman.
+                                        </p>
+                                    </div>
+                                </div>
+
+
                             </a>
                         </div>
-
-
                     </main>
+
 
                     <footer class="py-16 text-center text-sm text-black dark:text-white/70">
                         Copyright 2024 (Universitas Janabadra)

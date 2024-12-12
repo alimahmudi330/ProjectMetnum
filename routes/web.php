@@ -15,3 +15,17 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/about', function () {
+    return view('main.about');
+})->name('about');
+
+
+
+Route::get('/howtouse', function () {
+    return view('main.howtouse');
+})->name('howtouse');
+
+Route::get('/', function () {
+    return view('welcome');
+})->name('welcome');

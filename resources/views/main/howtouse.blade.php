@@ -23,17 +23,18 @@
         <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
             <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
             <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
+
                 <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
                     <header class="flex justify-between items-center py-10 px-6">
                         <div class="flex-1"></div> <!-- Placeholder untuk menjaga tata letak -->
+                        <a
+                href="{{ route('welcome') }}"
+                class="absolute top-4 left-4 rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+            >
+                Dashboard
+            </a>
                         <nav class="flex gap-4">
 
-                            <a
-                            href="{{ route('howtouse') }}"
-                            class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
-                        >
-                            How to Use
-                        </a>
                             <a
         href="{{ route('about') }}"
         class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
@@ -78,37 +79,26 @@
                     <main class="mt-6">
                         <div class="grid gap-12 lg:grid-cols-1 lg:gap-16">
                             <a
-                                href="{{ route('about') }}"
                                 id="docs-card"
                                 class="flex flex-col items-start gap-8 overflow-hidden rounded-lg bg-white p-8 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-16 lg:pb-16 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
                             >
-                                <!-- Menambahkan Gambar Offline -->
-                                <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
-                                    <img
-                                        src="assets/images/3.jpg" <!-- Ganti dengan path gambar lokal Anda -->
-                                    />
-                                </div>
-
-                                <!-- Menambahkan Teks Konten -->
                                 <div class="relative flex items-center gap-8 lg:items-end">
-                                    <div id="docs-card-content" class="flex items-start gap-8 lg:flex-col" style="padding: 20px;">
+                                    <div id="docs-card-content" class="flex items-start gap-8 lg:flex-col" style="padding: 20px; min-height: 600px;">
                                         <!-- Judul Teks -->
                                         <h2 class="text-2xl font-semibold text-black dark:text-white">
                                             Asri Pigura
                                         </h2>
 
                                         <!-- Paragraf Teks -->
-                                        <p class="mt-4 text-base/relaxed text-gray-700 dark:text-white"  style="text-align: justify;">
+                                        <p class="mt-4 text-base/relaxed text-gray-700 dark:text-white" style="text-align: justify;">
                                             Toko Mebel “Asri Pigura” yang berlokasi di Jalan Kolombo dekat UNY akan memproduksi tiga macam produk bingkai terbaru, yaitu Bingkai Foto, Bingkai Cermin, dan Bingkai Jam Dinding. Dimana setiap produk tersebut dalam pembuatannya membutuhkan 5 jenis bahan yaitu : balok kayu, lem, cat, cermin, dan kaca.
                                         </p>
                                     </div>
                                 </div>
-
                             </a>
                         </div>
-
-
                     </main>
+
 
                     <footer class="py-16 text-center text-sm text-black dark:text-white/70">
                         Copyright 2024 (Universitas Janabadra)
