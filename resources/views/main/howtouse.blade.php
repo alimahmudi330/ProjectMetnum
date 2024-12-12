@@ -86,12 +86,12 @@
                                     <div id="docs-card-content" class="flex items-start gap-8 lg:flex-col" style="padding: 20px; min-height: 600px;">
                                         <!-- Judul Teks -->
                                         <h2 class="text-2xl font-semibold text-black dark:text-white">
-                                            Asri Pigura
+                                            How to use
                                         </h2>
 
                                         <!-- Paragraf Teks -->
                                         <p class="mt-4 text-base/relaxed text-gray-700 dark:text-white" style="text-align: justify;">
-                                            Toko Mebel “Asri Pigura” yang berlokasi di Jalan Kolombo dekat UNY akan memproduksi tiga macam produk bingkai terbaru, yaitu Bingkai Foto, Bingkai Cermin, dan Bingkai Jam Dinding. Dimana setiap produk tersebut dalam pembuatannya membutuhkan 5 jenis bahan yaitu : balok kayu, lem, cat, cermin, dan kaca.
+                                            Operasi Baris Elementer: Adalah serangkaian manipulasi yang dilakukan pada baris-baris suatu matriks untuk mengubahnya menjadi bentuk eselon baris atau bentuk eselon baris tereduksi. Operasi ini sering digunakan untuk menyelesaikan sistem persamaan linear, mencari invers matriks, dan lain-lain.
                                         </p>
                                     </div>
                                 </div>

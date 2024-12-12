@@ -84,33 +84,21 @@ How to Use
                                     <!-- Gambar 1 -->
                                     <div class="relative flex flex-col items-center">
                                         <img src="assets/images/3.jpg" alt="Image 1" class="w-32 h-32 object-cover rounded-lg shadow-md">
-                                        <p class="mt-2 text-sm text-center text-gray-700 dark:text-white">
-                                            Deskripsi gambar 1
-                                        </p>
                                     </div>
 
                                     <!-- Gambar 2 -->
                                     <div class="relative flex flex-col items-center">
                                         <img src="assets/images/2.jpg" alt="Image 2" class="w-32 h-32 object-cover rounded-lg shadow-md">
-                                        <p class="mt-2 text-sm text-center text-gray-700 dark:text-white">
-                                            Deskripsi gambar 2
-                                        </p>
                                     </div>
 
                                     <!-- Gambar 3 -->
                                     <div class="relative flex flex-col items-center">
                                         <img src="assets/images/1.jpg" alt="Image 3" class="w-32 h-32 object-cover rounded-lg shadow-md">
-                                        <p class="mt-2 text-sm text-center text-gray-700 dark:text-white">
-                                            Deskripsi gambar 3
-                                        </p>
                                     </div>
 
                                     <!-- Gambar 4 -->
                                     <div class="relative flex flex-col items-center">
                                         <img src="assets/images/4.jpg" alt="Image 4" class="w-32 h-32 object-cover rounded-lg shadow-md">
-                                        <p class="mt-2 text-sm text-center text-gray-700 dark:text-white">
-                                            Deskripsi gambar 4
-                                        </p>
                                     </div>
                                 </div>
 
