@@ -85,7 +85,7 @@
                                 <!-- Menambahkan Gambar Offline -->
                                 <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
                                     <img
-                                        src="assets/images/3.jpg" <!-- Ganti dengan path gambar lokal Anda -->
+                                        src="assets/images/3.jpg"
                                     />
                                 </div>
 
