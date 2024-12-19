@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Asri Pigura / Instruction</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -20,59 +20,61 @@
         @endif
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-            <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
-            <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
+    <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
+        <!-- Background Image -->
+        <img id="background" class="absolute -left-20 top-0 max-w-[877px]" 
+             src="https://laravel.com/assets/img/welcome/background.svg" 
+             alt="Laravel background" />
 
-                <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                    <header class="flex justify-between items-center py-10 px-6">
-                        <div class="flex-1"></div> <!-- Placeholder untuk menjaga tata letak -->
-                        <a
-                href="{{ route('welcome') }}"
-                class="absolute top-4 left-4 rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
-            >
-                Dashboard
-            </a>
-                        <nav class="flex gap-4">
+        <!-- Main Content Wrapper -->
+        <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
 
-                            <a
-        href="{{ route('about') }}"
-        class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
-    >
-        About
-    </a>
+            <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
+                <header class="flex justify-between items-center py-10 px-6">
 
+                    <!-- Placeholder for Layout -->
+                    <div class="flex-1"></div>
+
+                    <!-- Dashboard Link -->
+                    <a href="{{ route('welcome') }}" 
+                       class="absolute top-2 left-4 rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
+                        Dashboard
+                    </a>
+
+                    <!-- Navigation Links -->
+                    <nav class="flex gap-4">
+                        <a href="{{ route('about') }}" 
+                           class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
+                            About
+                        </a>
 
                         @if (Route::has('login'))
                             <nav class="flex gap-4">
                                 @auth
-                                    <a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
-                                    >
+                                    <!-- Admin Dashboard Link -->
+                                    <a href="{{ url('/dashboard') }}" 
+                                       class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
                                         Dashboard Admin
                                     </a>
                                 @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
-                                    >
-                                        Log in Admin
+                                    <!-- Login Link -->
+                                    <a href="{{ route('login') }}" 
+                                       class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
+                                        Login
                                     </a>
 
                                     @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
-                                        >
+                                        <!-- Register Link -->
+                                        <a href="{{ route('register') }}" 
+                                           class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
                                             Register
                                         </a>
                                     @endif
                                 @endauth
                             </nav>
-                            </nav>
                         @endif
-                    </header>
+                    </nav>
+                </header>
 
 
 
@@ -86,7 +88,7 @@
                                     <div id="docs-card-content" class="flex items-start gap-8 lg:flex-col" style="padding: 20px; min-height: 600px;">
                                         <!-- Judul Teks -->
                                         <h2 class="text-2xl font-semibold text-black dark:text-white">
-                                            How to use
+                                            Instruction
                                         </h2>
 
                                         <!-- Paragraf Teks -->

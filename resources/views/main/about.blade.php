@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Asri Pigura / About</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -20,114 +20,127 @@
         @endif
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-            <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
+    <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
+        <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
 
-            <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-                <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                    <header class="flex justify-between items-center py-10 px-6">
-                        <div class="flex-1"></div> <!-- Placeholder untuk menjaga tata letak -->
+        <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
+            <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
+                <header class="flex justify-between items-center py-10 px-6">
 
-                        <a
-    href="{{ route('welcome') }}"
-    class="absolute top-4 left-4 rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
-    Dashboard
-</a>
+                    <!-- Placeholder untuk menjaga tata letak -->
+                    <div class="flex-1"></div>
 
-<a
-href="{{ route('howtouse') }}"
-class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
-style="margin-right: 16px;">
-How to Use
-</a>
+                    <!-- Link Dashboard -->
+                    <a href="{{ route('welcome') }}" class="absolute top-2 left-4 rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
+                        Dashboard
+                    </a>
 
-                        @if (Route::has('login'))
-                            <nav class="flex gap-4">
-                                @auth
+                    <!-- Link How to Use -->
+                    <a href="{{ route('howtouse') }}" class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600" style="margin-right: 16px;">
+                        Instruction
+                    </a>
 
-                                    <a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
-                                    >
-                                        Dashboard Admin
+                    <!-- Authentication Links -->
+                    @if (Route::has('login'))
+                        <nav class="flex gap-4">
+                            @auth
+                                <a href="{{ url('/dashboard') }}" class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
+                                    Dashboard Admin
+                                </a>
+                            @else
+                                <a href="{{ route('login') }}" class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
+                                    Login
+                                </a>
+
+                                @if (Route::has('register'))
+                                    <a href="{{ route('register') }}" class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
+                                        Register
                                     </a>
-                                @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
-                                    >
-                                        Log in Admin
-                                    </a>
+                                @endif
+                            @endauth
+                        </nav>
+                    @endif
+                </header>
 
-                                    @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-4 py-2 bg-gray-200 text-black transition hover:bg-gray-300 focus:outline-none dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
-                                        >
-                                            Register
-                                        </a>
-                                    @endif
-                                @endauth
-                            </nav>
-                        @endif
-                    </header>
+                <main class="mt-6">
+                    <div class="grid gap-12 lg:grid-cols-1 lg:gap-16">
+                        <a href="{{ route('about') }}" id="docs-card" class="flex flex-col items-start gap-8 overflow-hidden rounded-lg bg-white p-8 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-16 lg:pb-16 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
 
-                    <main class="mt-6">
-                        <div class="grid gap-12 lg:grid-cols-1 lg:gap-16">
-                            <a
-                                href="{{ route('about') }}"
-                                id="docs-card"
-                                class="flex flex-col items-start gap-8 overflow-hidden rounded-lg bg-white p-8 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-16 lg:pb-16 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <!-- Menambahkan 4 Gambar dengan Deskripsi -->
-                                <div class="grid grid-cols-2 gap-6">
-                                    <!-- Gambar 1 -->
-                                    <div class="relative flex flex-col items-center">
-                                        <img src="assets/images/3.jpg" alt="Image 1" class="w-32 h-32 object-cover rounded-lg shadow-md">
-                                    </div>
-
-                                    <!-- Gambar 2 -->
-                                    <div class="relative flex flex-col items-center">
-                                        <img src="assets/images/2.jpg" alt="Image 2" class="w-32 h-32 object-cover rounded-lg shadow-md">
-                                    </div>
-
-                                    <!-- Gambar 3 -->
-                                    <div class="relative flex flex-col items-center">
-                                        <img src="assets/images/1.jpg" alt="Image 3" class="w-32 h-32 object-cover rounded-lg shadow-md">
-                                    </div>
-
-                                    <!-- Gambar 4 -->
-                                    <div class="relative flex flex-col items-center">
-                                        <img src="assets/images/4.jpg" alt="Image 4" class="w-32 h-32 object-cover rounded-lg shadow-md">
-                                    </div>
+                            <!-- Gallery Section -->
+                            <div class="grid grid-cols-2 gap-6">
+                                <!-- Gambar 1 -->
+                                <div class="relative flex flex-col items-center">
+                                    <img src="assets/images/3.jpg" alt="Image 1" class="w-auto h-auto object-cover rounded-lg shadow-md">
                                 </div>
+
+                                <!-- Gambar 2 -->
+                                <div class="relative flex flex-col items-center">
+                                    <img src="assets/images/2.jpg" alt="Image 2" class="w-auto h-auto object-cover rounded-lg shadow-md">
+                                </div>
+
+                                <!-- Gambar 3 -->
+                                <div class="relative flex flex-col items-center">
+                                    <img src="assets/images/1.jpg" alt="Image 3" class="w-auto h-auto object-cover rounded-lg shadow-md">
+                                </div>
+
+                                <!-- Gambar 4 -->
+                                <div class="relative flex flex-col items-center">
+                                    <img src="assets/images/4.jpg" alt="Image 4" class="w-auto h-auto object-cover rounded-lg shadow-md">
+                                </div>
+                            </div>
 
                                 <!-- Menambahkan Teks Konten -->
                                 <div class="relative flex items-center gap-8 lg:items-end mt-8">
-                                    <div id="docs-card-content" class="flex items-start gap-8 lg:flex-col" style="padding: 20px;">
+                                    <div id="docs-card-content" class="flex items-start gap-3 lg:flex-col" style="padding: 15px;">
                                         <h2 class="text-2xl font-semibold text-black dark:text-white">About</h2>
-                                        <p class="mt-4 text-base/relaxed text-gray-700 dark:text-white" style="text-align: justify;">
-                                            UMKM (Usaha Mikro, Kecil, dan Menengah) berperan vital dalam perekonomian Indonesia, khususnya dalam mendorong pertumbuhan ekonomi lokal dan membuka lapangan pekerjaan. Salah satu contoh UMKM yang menonjol di sektor industri kreatif adalah toko pengrajin bingkai dan hiasan dinding yang dimiliki oleh Pak Gino, berlokasi di Jalan Kolombo dekat Universitas Negeri Yogyakarta (UNY). Pak Gino memulai usaha ini dengan tujuan sederhana: mencukupi kebutuhan hidup keluarganya. Dalam kondisi ekonomi yang menantang, usaha kerajinan ini menjadi sumber penghidupan yang penting, sekaligus contoh bagaimana kreativitas dapat dimanfaatkan untuk bertahan dan berkembang.<br><br>
-
-                                            Pak Gino, seorang pengrajin yang terampil, memiliki dedikasi tinggi terhadap kualitas dan keindahan produk yang dihasilkan. Bingkai dan hiasan dinding buatannya mencerminkan keterampilan tangan yang diwarisi secara turun-temurun serta inovasi yang terus diperbarui. Meskipun usaha ini bermula dari upaya sederhana untuk memenuhi kebutuhan dasar, seiring berjalannya waktu, toko Pak Gino berhasil menarik perhatian pelanggan setempat maupun mahasiswa dari UNY yang sering mengunjungi toko tersebut untuk mencari bingkai dengan desain artistik.<br><br>
-
-                                            Namun, seperti banyak UMKM lainnya, toko Pak Gino menghadapi sejumlah tantangan besar. Salah satunya adalah keterbatasan dalam memasarkan produk secara lebih luas. Metode pemasaran yang digunakan masih konvensional, mengandalkan kunjungan langsung pelanggan dan rekomendasi dari mulut ke mulut. Hal ini membuat usaha Pak Gino sulit bersaing dengan toko-toko modern yang lebih mudah diakses melalui platform online. Tantangan lainnya adalah pengelolaan stok bahan baku dan biaya operasional yang harus diatur dengan cermat agar usaha tetap berjalan stabil.<br><br>
-
-                                            Selain tantangan eksternal, usaha Pak Gino juga harus terus beradaptasi dengan tren dan preferensi konsumen yang terus berubah. Desain bingkai dan hiasan dinding yang dahulu diminati mungkin tidak lagi sesuai dengan selera generasi muda saat ini. Oleh karena itu, diperlukan inovasi berkelanjutan dalam desain dan pengembangan produk, yang tidak hanya memperhatikan aspek estetika tetapi juga fungsionalitas dan keunikan.<br><br>
-
-                                            Di tengah persaingan yang semakin ketat dan perubahan gaya hidup konsumen yang cenderung mengutamakan kepraktisan, keberlanjutan usaha Pak Gino bergantung pada kemampuannya berinovasi serta memperluas jangkauan pasar. Salah satu langkah penting yang dapat dilakukan adalah mengadopsi strategi pemasaran digital, seperti memanfaatkan media sosial dan e-commerce untuk memperkenalkan produk ke khalayak yang lebih luas. Dengan promosi yang tepat, toko Pak Gino dapat menjangkau pelanggan di luar daerah Yogyakarta, bahkan berpotensi untuk merambah pasar nasional.<br><br>
-
-                                            Tujuan awal Pak Gino dalam mendirikan usaha bingkai dan hiasan dinding mungkin sederhana, yakni mencukupi kebutuhan hidup keluarganya. Namun, seiring dengan berkembangnya usaha ini, terdapat potensi besar untuk menjadikannya sebagai salah satu contoh sukses UMKM yang mampu beradaptasi dan bertahan di tengah perubahan zaman.
+                                        <h3 class="text-xl font-semibold text-black dark:text-white mt-2">Tentang Asri Pigura</h3>
+                                        <p class="mt-2 text-base/relaxed text-gray-700 dark:text-white" style="text-align: justify;">
+                                            Asri Pigura adalah perusahaan lokal yang mengkhususkan diri dalam pembuatan pigura berkualitas tinggi dengan desain yang elegan dan fungsional. Didirikan dengan visi untuk memperkenalkan seni dalam kehidupan sehari-hari, kami menawarkan berbagai pilihan pigura yang tidak hanya mempercantik ruangan, tetapi juga melindungi kenangan dan karya seni Anda.
                                         </p>
+                                        <h3 class="text-xl font-semibold text-black dark:text-white mt-2">Visi Kami</h3>
+                                        <p class="mt-2 text-base/relaxed text-gray-700 dark:text-white" style="text-align: justify;">
+                                            Menjadi penyedia pigura dan kerajinan seni terkemuka di Indonesia, yang dikenal akan kualitas, desain inovatif, dan kepuasan pelanggan yang tinggi.
+                                        </p>
+                                        <h3 class="text-xl font-semibold text-black dark:text-white mt-2">Misi Kami</h3>
+                                        <ul class="list-none pl-6 mt-1">
+                                            <li class="text-base text-gray-700 dark:text-white mt-2" style="text-align: justify;">
+                                                <strong>Menyediakan Pigura Berkualitas Tinggi</strong><br>
+                                                Kami berkomitmen untuk memberikan produk pigura yang kuat, tahan lama, dan estetis untuk memenuhi kebutuhan pelanggan.
+                                            </li>
+                                            <li class="text-base text-gray-700 dark:text-white mt-2" style="text-align: justify;">
+                                                <strong>Meningkatkan Nilai Estetika Ruang</strong><br>
+                                                Dengan berbagai pilihan desain yang elegan dan unik, kami ingin membantu Anda memperindah ruang hidup atau ruang kerja melalui pigura yang tepat.
+                                            </li>
+                                            <li class="text-base text-gray-700 dark:text-white mt-2" style="text-align: justify;">
+                                                <strong>Inovasi dalam Desain</strong><br>
+                                                Kami terus berinovasi dalam menciptakan desain pigura yang tidak hanya mengikuti tren, tetapi juga mampu menciptakan kesan yang berbeda dan berkelas.
+                                            </li>
+                                        </ul>
+                                        <h3 class="text-xl font-semibold text-black dark:text-white mt-2">Hubungi Kami</h3>
+                                        <p class="mt-2 text-base/relaxed text-gray-700 dark:text-white" style="text-align: justify;">
+                                        Kami selalu senang mendengar dari pelanggan kami. Jika Anda memiliki pertanyaan atau ingin memesan pigura, jangan ragu untuk menghubungi kami melalui:
+                                        </p>
+                                        <ul class="list-none pl-6">
+                                            <li class="text-base text-gray-700 dark:text-white" style="text-align: justify;">
+                                                <strong>Telepon:</strong> 081327214689
+                                            </li>
+                                        </ul>
+                                        <h6 class="text-xl font-semibold text-black dark:text-white">Alamat:</h6>
+                                        <div id="map">
+                                        <iframe 
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d883.8306762620531!2d110.37860481619904!3d-7.776150170034023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59cac217d8d1%3A0xd23ba92b4b9a7448!2sPigura%20Jogja%20Karikatur!5e1!3m2!1sid!2sid!4v1734026065909!5m2!1sid!2sid" 
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            width="500" 
+                                            height="350" 
+                                            style="border:0;" 
+                                            allowfullscreen="" 
+                                            loading="lazy"></iframe>
+                                    </div>
                                     </div>
                                 </div>
-
-
                             </a>
                         </div>
                     </main>
-
-
                     <footer class="py-16 text-center text-sm text-black dark:text-white/70">
                         Copyright 2024 (Universitas Janabadra)
                     </footer>
