@@ -9,6 +9,21 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
+
+class Item extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['name', 'wood', 'paint', 'glass'];
+}
+
+class Material extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['type', 'stock'];
+}
 
 class User extends Authenticatable
 {
